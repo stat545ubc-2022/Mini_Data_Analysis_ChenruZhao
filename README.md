@@ -14,3 +14,4 @@
 1. README.md - The description of this repo
 2. mini-project-1.Rmd - The mini data analysis rmd file
 3. mini-project-1.md - The mini data analysis md file that is knited from mini-project-1.Rmd
+4. mini-project-1_files - A folder includes all png files that created by kniting
