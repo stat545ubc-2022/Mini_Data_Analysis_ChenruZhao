@@ -6,12 +6,19 @@
 ## This README file contains how to run my files and what files are included in this repo
 
 ### How to compile and run my files?
-1. Please open the mini-project-1.Rmd file in RStudio.
+1. Please open the mini-project-1.Rmd/mini-project-2.Rmd file in RStudio.
 2. For single code chunck, please click the play button shown with the code chunck to run the code.
 3. To see the entire markdown file, please click the knit shown on the RStudio.
 
 ### Files included in the repo
 1. README.md - The description of this repo
-2. mini-project-1.Rmd - The mini data analysis rmd file
-3. mini-project-1.md - The mini data analysis md file that is knited from mini-project-1.Rmd
-4. mini-project-1_files - A folder includes all png files that created by kniting
+2. Milestone1 - A folder contains mini-project-1.Rmd,  mini-project-1.md and mini-project-1_files 
+  1> mini-project-1.Rmd - The mini data analysis 1 rmd file
+  2> mini-project-1.md - The mini data analysis 1 md file that is knited from mini-project-1.Rmd
+  3> mini-project-1_files - A folder includes all png files that created by kniting mini-project-1.Rmd
+3. Milestone2 - A folder contains mini-project-2.Rmd,  mini-project-2.md and mini-project-2_files 
+  1> mini-project-2.Rmd - The mini data analysis 2 rmd file
+  2> mini-project-2.md - The mini data analysis 2 md file that is knited from mini-project-2.Rmd
+  3> mini-project-2_files - A folder includes all png files that created by kniting mini-project-2.Rmd
+4. output - A folder contains csv and rds files created by mini-project-2.Rmd
+
