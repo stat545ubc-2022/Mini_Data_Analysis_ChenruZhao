@@ -3,7 +3,10 @@
 **Student Name:** Chenru Zhao    
 **Student No:** 94690807
 
-## This README file contains how to run my files and what files are included in this repo
+## This README file contains description of this project, how to run my files and what files are included in this repo
+
+### Description
+This Mini Data Anaylysis is a mini data analysis on vancouver_trees dataset.
 
 ### How to compile and run my files?
 1. Please open the mini-project-1.Rmd/mini-project-2.Rmd file in RStudio.
