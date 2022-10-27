@@ -1,7 +1,7 @@
 Mini Data-Analysis Deliverable 1
 ================
 
-# Welcome to your (maybe) first-ever data analysis project\!
+# Welcome to your (maybe) first-ever data analysis project!
 
 And hopefully the first of many. Let’s get started:
 
@@ -14,8 +14,6 @@ And hopefully the first of many. Let’s get started:
     devtools::install_github("UBC-MDS/datateachr")
 
 2.  Load the packages below.
-
-<!-- end list -->
 
 ``` r
 library(datateachr)
@@ -42,33 +40,33 @@ library(tidyverse)
 
 ## For Both Milestones
 
-  - Each milestone is worth 45 points. The number of points allocated to
-    each task will be annotated within each deliverable. Tasks that are
-    more challenging will often be allocated more points.
+- Each milestone is worth 45 points. The number of points allocated to
+  each task will be annotated within each deliverable. Tasks that are
+  more challenging will often be allocated more points.
 
-  - 10 points will be allocated to the reproducibility, cleanliness, and
-    coherence of the overall analysis. While the two milestones will be
-    submitted as independent deliverables, the analysis itself is a
-    continuum - think of it as two chapters to a story. Each chapter, or
-    in this case, portion of your analysis, should be easily followed
-    through by someone unfamiliar with the content.
-    [Here](https://swcarpentry.github.io/r-novice-inflammation/06-best-practices-R/)
-    is a good resource for what constitutes “good code”. Learning good
-    coding practices early in your career will save you hassle later
-    on\!
+- 10 points will be allocated to the reproducibility, cleanliness, and
+  coherence of the overall analysis. While the two milestones will be
+  submitted as independent deliverables, the analysis itself is a
+  continuum - think of it as two chapters to a story. Each chapter, or
+  in this case, portion of your analysis, should be easily followed
+  through by someone unfamiliar with the content.
+  [Here](https://swcarpentry.github.io/r-novice-inflammation/06-best-practices-R/)
+  is a good resource for what constitutes “good code”. Learning good
+  coding practices early in your career will save you hassle later on!
 
 ## For Milestone 1
 
 **To complete this milestone**, edit [this very `.Rmd`
 file](https://raw.githubusercontent.com/UBC-STAT/stat545.stat.ubc.ca/master/content/mini-project/mini-project-1.Rmd)
-directly. Fill in the sections that are tagged with `<!--- start your
-work below --->`.
+directly. Fill in the sections that are tagged with
+`<!--- start your work below --->`.
 
 **To submit this milestone**, make sure to knit this `.Rmd` file to an
-`.md` file by changing the YAML output settings from `output:
-html_document` to `output: github_document`. Commit and push all of your
-work to the mini-analysis GitHub repository you made earlier, and tag a
-release on GitHub. Then, submit a link to your tagged release on canvas.
+`.md` file by changing the YAML output settings from
+`output: html_document` to `output: github_document`. Commit and push
+all of your work to the mini-analysis GitHub repository you made
+earlier, and tag a release on GitHub. Then, submit a link to your tagged
+release on canvas.
 
 **Points**: This milestone is worth 45 points: 43 for your analysis, 1
 point for having your Milestone 1 document knit error-free, and 1 point
@@ -78,11 +76,11 @@ for tagging your release on Github.
 
 By the end of this milestone, you should:
 
-  - Become familiar with your dataset of choosing
-  - Select 4 questions that you would like to answer with your data
-  - Generate a reproducible and clear report using R Markdown
-  - Become familiar with manipulating and summarizing your data in
-    tibbles using `dplyr`, with a research question in mind.
+- Become familiar with your dataset of choosing
+- Select 4 questions that you would like to answer with your data
+- Generate a reproducible and clear report using R Markdown
+- Become familiar with manipulating and summarizing your data in tibbles
+  using `dplyr`, with a research question in mind.
 
 # Task 1: Choose your favorite dataset (10 points)
 
@@ -90,44 +88,44 @@ The `datateachr` package by Hayley Boyce and Jordan Bourak currently
 composed of 7 semi-tidy datasets for educational purposes. Here is a
 brief description of each dataset:
 
-  - *apt\_buildings*: Acquired courtesy of The City of Toronto’s Open
-    Data Portal. It currently has 3455 rows and 37 columns.
+- *apt_buildings*: Acquired courtesy of The City of Toronto’s Open Data
+  Portal. It currently has 3455 rows and 37 columns.
 
-  - *building\_permits*: Acquired courtesy of The City of Vancouver’s
-    Open Data Portal. It currently has 20680 rows and 14 columns.
+- *building_permits*: Acquired courtesy of The City of Vancouver’s Open
+  Data Portal. It currently has 20680 rows and 14 columns.
 
-  - *cancer\_sample*: Acquired courtesy of UCI Machine Learning
-    Repository. It currently has 569 rows and 32 columns.
+- *cancer_sample*: Acquired courtesy of UCI Machine Learning Repository.
+  It currently has 569 rows and 32 columns.
 
-  - *flow\_sample*: Acquired courtesy of The Government of Canada’s
-    Historical Hydrometric Database. It currently has 218 rows and 7
-    columns.
+- *flow_sample*: Acquired courtesy of The Government of Canada’s
+  Historical Hydrometric Database. It currently has 218 rows and 7
+  columns.
 
-  - *parking\_meters*: Acquired courtesy of The City of Vancouver’s Open
-    Data Portal. It currently has 10032 rows and 22 columns.
+- *parking_meters*: Acquired courtesy of The City of Vancouver’s Open
+  Data Portal. It currently has 10032 rows and 22 columns.
 
-  - *steam\_games*: Acquired courtesy of Kaggle. It currently has 40833
-    rows and 21 columns.
+- *steam_games*: Acquired courtesy of Kaggle. It currently has 40833
+  rows and 21 columns.
 
-  - *vancouver\_trees*: Acquired courtesy of The City of Vancouver’s
-    Open Data Portal. It currently has 146611 rows and 20 columns.
+- *vancouver_trees*: Acquired courtesy of The City of Vancouver’s Open
+  Data Portal. It currently has 146611 rows and 20 columns.
 
 **Things to keep in mind**
 
-  - We hope that this project will serve as practice for carrying our
-    your own *independent* data analysis. Remember to comment your code,
-    be explicit about what you are doing, and write notes in this
-    markdown document when you feel that context is required. As you
-    advance in the project, prompts and hints to do this will be
-    diminished - it’ll be up to you\!
+- We hope that this project will serve as practice for carrying our your
+  own *independent* data analysis. Remember to comment your code, be
+  explicit about what you are doing, and write notes in this markdown
+  document when you feel that context is required. As you advance in the
+  project, prompts and hints to do this will be diminished - it’ll be up
+  to you!
 
-  - Before choosing a dataset, you should always keep in mind **your
-    goal**, or in other ways, *what you wish to achieve with this data*.
-    This mini data-analysis project focuses on *data wrangling*,
-    *tidying*, and *visualization*. In short, it’s a way for you to get
-    your feet wet with exploring data on your own.
+- Before choosing a dataset, you should always keep in mind **your
+  goal**, or in other ways, *what you wish to achieve with this data*.
+  This mini data-analysis project focuses on *data wrangling*,
+  *tidying*, and *visualization*. In short, it’s a way for you to get
+  your feet wet with exploring data on your own.
 
-And that is exactly the first thing that you will do\!
+And that is exactly the first thing that you will do!
 
 1.1 Out of the 7 datasets available in the `datateachr` package, choose
 **4** that appeal to you based on their description. Write your choices
@@ -142,13 +140,13 @@ understand your data.
 
 <!-------------------------- Start your work below ---------------------------->
 
-1: apt\_buildings
+1: apt_buildings
 
-2: building\_permits
+2: building_permits
 
-3: parking\_meters
+3: parking_meters
 
-4: vancouver\_trees
+4: vancouver_trees
 
 <!----------------------------------------------------------------------------->
 
@@ -210,12 +208,10 @@ glimpse(apt_buildings) # returns dimension and every columns of a dataset
     ## $ cooling_room                     <chr> "NO", "NO", "NO", "NO", "NO", "NO", "…
     ## $ no_barrier_free_accessible_units <dbl> 2, 0, 0, 42, 0, NA, 14, 0, 0, 1, 25, …
 
-1.  After running glimpse(apt\_buildings), I know the number of rows in
-    apt\_buildings is 3455. I also know the number of cols in
-    apt\_buildings is 37. Meanwhile, I know the name and type of each
-    variable in the apt\_buildings dataset.
-
-<!-- end list -->
+1.  After running glimpse(apt_buildings), I know the number of rows in
+    apt_buildings is 3455. I also know the number of cols in
+    apt_buildings is 37. Meanwhile, I know the name and type of each
+    variable in the apt_buildings dataset.
 
 ``` r
 ### EXPLORE HERE ###
@@ -243,13 +239,11 @@ dim(building_permits) # returns the dimension of building_permits
 
     ## [1] 20680    14
 
-2.  After running head(building\_permits), I know the name and type of
-    each variable in building\_permits and get the first 6 rows of
-    building\_permits. After running dim(building\_permits), I know the
-    number of rows in building\_permits is 20680 and the number of cols
-    in building\_permits is 14.
-
-<!-- end list -->
+2.  After running head(building_permits), I know the name and type of
+    each variable in building_permits and get the first 6 rows of
+    building_permits. After running dim(building_permits), I know the
+    number of rows in building_permits is 20680 and the number of cols
+    in building_permits is 14.
 
 ``` r
 ### EXPLORE HERE ###
@@ -278,13 +272,11 @@ head(parking_meters) # returns the first 6 rows of parking_meters
     ## #   variable names ¹​r_mf_6p_10, ²​r_sa_9a_6p, ³​r_sa_6p_10, ⁴​r_su_9a_6p,
     ## #   ⁵​r_su_6p_10, ⁶​rate_misc, ⁷​time_in_effect
 
-3.  After running class(parking\_meters), I know the class of
-    parking\_meters is data.frame and “tbl” and “tbl\_df” are a modern
-    taken on the parking\_meters data. After running
-    head(parking\_meters), I know the name and type of each variable in
-    parking\_meters and get the first 6 rows of parking\_meters.
-
-<!-- end list -->
+3.  After running class(parking_meters), I know the class of
+    parking_meters is data.frame and “tbl” and “tbl_df” are a modern
+    taken on the parking_meters data. After running
+    head(parking_meters), I know the name and type of each variable in
+    parking_meters and get the first 6 rows of parking_meters.
 
 ``` r
 ### EXPLORE HERE ###
@@ -352,11 +344,11 @@ summary(vancouver_trees) # returns summary statistics of vancouver_trees
     ##                     Max.   :2019-07-03   Max.   :-123.0   Max.   :49.29  
     ##                     NA's   :76548        NA's   :22771    NA's   :22771
 
-4.  After running head(vancouver\_trees), I know the name and type of
-    each variable in vancouver\_trees and get the first 6 rows of
-    vancouver\_trees. After running summary(vancouver\_trees), I know
-    the min, 1st Qu, Median, Mean, 3rd Qu, and max statistics of each
-    numerical variable in vancouver\_trees dataset.
+4.  After running head(vancouver_trees), I know the name and type of
+    each variable in vancouver_trees and get the first 6 rows of
+    vancouver_trees. After running summary(vancouver_trees), I know the
+    min, 1st Qu, Median, Mean, 3rd Qu, and max statistics of each
+    numerical variable in vancouver_trees dataset.
 
 <!----------------------------------------------------------------------------->
 
@@ -367,36 +359,36 @@ in your explanation.
 
 <!-------------------------- Start your work below ---------------------------->
 
-I will choose **apt\_buildings** and **vancouver\_trees** datasets. For
-apt\_buildings dataset, it has both rich categorical and numerical
-variables. Besides, the variables of apt\_buildings is easier to
+I will choose **apt_buildings** and **vancouver_trees** datasets. For
+apt_buildings dataset, it has both rich categorical and numerical
+variables. Besides, the variables of apt_buildings is easier to
 understand for me. Hence, I think I can construct a variety of research
-questions based on its diverse data. For vancouver\_trees dataset, it
-has 146611 rows that is a really large dataset and I think a larger
-amount of data would give a more accurate answer to the question.
-Furthermore, I’m currently live in Vancouver, so I’m more interested in
-the dataset that is close to my life.
+questions based on its diverse data. For vancouver_trees dataset, it has
+146611 rows that is a really large dataset and I think a larger amount
+of data would give a more accurate answer to the question. Furthermore,
+I’m currently live in Vancouver, so I’m more interested in the dataset
+that is close to my life.
 
 <!----------------------------------------------------------------------------->
 
-1.4 Time for the final decision\! Going back to the beginning, it’s
+1.4 Time for the final decision! Going back to the beginning, it’s
 important to have an *end goal* in mind. For example, if I had chosen
 the `titanic` dataset for my project, I might’ve wanted to explore the
 relationship between survival and other variables. Try to think of 1
 research question that you would want to answer with each dataset. Note
 them down below, and make your final choice based on what seems more
-interesting to you\!
+interesting to you!
 
 <!-------------------------- Start your work below ---------------------------->
 
-For apt\_buildings dataset, my research question is whether the type of
+For apt_buildings dataset, my research question is whether the type of
 heating in the apartment changes with the year the house was built?
 
-For vancouver\_trees dataset, my research question is what is the
+For vancouver_trees dataset, my research question is what is the
 relationship between the height of tree and the year it was planted?
 Will a tree with a bigger year be higher?
 
-My final decision is **vancouver\_trees** dataset, because I’m more
+My final decision is **vancouver_trees** dataset, because I’m more
 interested in the situation of tree in Vancouver.
 <!----------------------------------------------------------------------------->
 
@@ -404,12 +396,12 @@ interested in the situation of tree in Vancouver.
 
 Read Tasks 2 and 3 *fully* before starting to complete either of them.
 Probably also a good point to grab a coffee to get ready for the fun
-part\!
+part!
 
 This project is semi-guided, but meant to be *independent*. For this
 reason, you will complete tasks 2 and 3 below (under the **START HERE**
 mark) as if you were writing your own exploratory data analysis report,
-and this guidance never existed\! Feel free to add a brief introduction
+and this guidance never existed! Feel free to add a brief introduction
 section to your project, format the document with markdown syntax as you
 deem appropriate, and structure the analysis as you deem appropriate.
 Remember, marks will be awarded for completion of the 4 tasks, but 10
@@ -447,7 +439,7 @@ tasks may make sense for your data - which is why you should only answer
     born in a particular year…
 6.  Use a boxplot to look at the frequency of different observations
     within a single variable. You can do this for more than one variable
-    if you wish\!
+    if you wish!
 7.  Make a new tibble with a subset of your data, with variables and
     observations that you are interested in exploring.
 8.  Use a density plot to explore any of your variables (that are
@@ -457,8 +449,6 @@ tasks may make sense for your data - which is why you should only answer
 
 1.  Plot the distribution of the number of trees over years with
     histogram. (Finish exercise 1)
-
-<!-- end list -->
 
 ``` r
 tree_year_distribution <- ggplot(vancouver_trees, aes(date_planted)) + 
@@ -472,8 +462,6 @@ print(tree_year_distribution)
 
 2.  Filter observations of trees that have diameter wider than 9 to get
     trees wider than half of all trees. (Finish exercise 5)
-
-<!-- end list -->
 
 ``` r
 # 9 is the median diameter
@@ -499,10 +487,8 @@ head(wide_vancouver_trees) # print the first 6 rows of wide_vancouver_trees
     ## #   variable names ¹​std_street, ²​genus_name, ³​species_name, ⁴​cultivar_name,
     ## #   ⁵​common_name, ⁶​assigned
 
-3.  Make a new tibble with tree\_id, genus\_name, height\_range\_id,
-    diameter and date\_planted. (Finish exercise 7)
-
-<!-- end list -->
+3.  Make a new tibble with tree_id, genus_name, height_range_id,
+    diameter and date_planted. (Finish exercise 7)
 
 ``` r
 vancouver_trees_genus <- vancouver_trees %>%
@@ -525,8 +511,6 @@ head(vancouver_trees_genus) # print the first 6 rows of vancouver_trees_genus
 4.  Use a density plot to explore the distribution of genus of trees
     over years. (Finish exercise 8)
 
-<!-- end list -->
-
 ``` r
 genus_distribution1 <- vancouver_trees_genus %>% 
   drop_na(date_planted) %>% # drop NA values in date_planted
@@ -540,7 +524,7 @@ print(genus_distribution1)
 
     ## Warning in max(ids, na.rm = TRUE): no non-missing arguments to max; returning
     ## -Inf
-    
+
     ## Warning in max(ids, na.rm = TRUE): no non-missing arguments to max; returning
     ## -Inf
 
@@ -577,9 +561,9 @@ comments for a reader to understand your reasoning and code.
     the trees that have diameter than 9 out, I can get my answer. Hence,
     it is related to exercise 5.
 
-3.  I’m interested in tree\_id, genus\_name, height\_range\_id, diameter
-    and date\_planted variables, so I select them and created a new
-    tibble with those variables that related to exercise 7.
+3.  I’m interested in tree_id, genus_name, height_range_id, diameter and
+    date_planted variables, so I select them and created a new tibble
+    with those variables that related to exercise 7.
 
 4.  I want to know how the number of trees planted in each genus varies
     with the year. Since the distribution of genus of trees can answer
@@ -594,11 +578,11 @@ comments for a reader to understand your reasoning and code.
 
 So far, you have chosen a dataset and gotten familiar with it through
 exploring the data. Now it’s time to figure out 4 research questions
-that you would like to answer with your data\! Write the 4 questions and
+that you would like to answer with your data! Write the 4 questions and
 any additional comments at the end of this deliverable. These questions
 are not necessarily set in stone - TAs will review them and give you
 feedback; therefore, you may choose to pursue them as they are for the
-rest of the project, or make modifications\!
+rest of the project, or make modifications!
 
 <!--- *****START HERE***** --->
 
@@ -621,11 +605,11 @@ manipulation functions.
 Now, for each of your four research questions, choose one task from
 options 1-4 (summarizing), and one other task from 4-8 (graphing). You
 should have 2 tasks done for each research question (8 total). Make sure
-it makes sense to do them\! (e.g. don’t use a numerical variables for a
+it makes sense to do them! (e.g. don’t use a numerical variables for a
 task that needs a categorical variable.). Comment on why each task helps
-(or doesn’t\!) answer the corresponding research question.
+(or doesn’t!) answer the corresponding research question.
 
-Ensure that the output of each operation is printed\!
+Ensure that the output of each operation is printed!
 
 **Summarizing:**
 
@@ -633,11 +617,10 @@ Ensure that the output of each operation is printed\!
     **one numerical variable** across the groups of **one categorical
     variable** from your data.
 2.  Compute the number of observations for at least one of your
-    categorical variables. Do not use the function `table()`\!
+    categorical variables. Do not use the function `table()`!
 3.  Create a categorical variable with 3 or more groups from an existing
     numerical variable. You can use this new variable in the other
-    tasks\! *An example: age in years into “child, teen, adult,
-    senior”.*
+    tasks! *An example: age in years into “child, teen, adult, senior”.*
 4.  Based on two categorical variables, calculate two summary statistics
     of your choosing.
 
@@ -655,14 +638,12 @@ Ensure that the output of each operation is printed\!
     is the best.
 
 Make sure it’s clear what research question you are doing each operation
-for\!
+for!
 
 <!------------------------- Start your work below ----------------------------->
 
 1.  Which genus of trees are most popular and which are planted the
     least in Vancouver?
-
-<!-- end list -->
 
 ``` r
 # Implement 2.
@@ -713,8 +694,6 @@ it’s most popular. The KALOPANAX, HALESIA and ALBIZIA have the shortest
 bar, which means they are planted the least.
 
 2.  Which decade saw more trees planted in Vancouver?
-
-<!-- end list -->
 
 ``` r
 # Implement 3.
@@ -818,8 +797,6 @@ see the decade with the most number of trees planted is 2000\~2010.
 3.  What is the relationship between the height of a tree and its age?
     Are older trees generally higher?
 
-<!-- end list -->
-
 ``` r
 # Implement 2.
 # Compute the number of observations of each height id and each decade in height_range_id (categorical variable) and year_period (categorical variable). In each height range id, compare the number of trees in each decade.
@@ -847,13 +824,13 @@ height_trees_count
     ## 10               2 2000~2010           9328
     ## # … with 29 more rows
 
-It helps answer the question. From height\_range\_id 2 to 6, trees
-planted in 1989\~1999 are more than 2000\~2010 in each
-height\_range\_id. Also, trees planted in 2000\~2010 are more than
-2011\~2019 in each height\_range\_id. From last question, we know the
-most number of trees planted was in 2000\~2010, so it’s more likely the
-height of the tree was roughly positively correlated with its age. The
-older trees are more likely to be higher than younger trees.
+It helps answer the question. From height_range_id 2 to 6, trees planted
+in 1989\~1999 are more than 2000\~2010 in each height_range_id. Also,
+trees planted in 2000\~2010 are more than 2011\~2019 in each
+height_range_id. From last question, we know the most number of trees
+planted was in 2000\~2010, so it’s more likely the height of the tree
+was roughly positively correlated with its age. The older trees are more
+likely to be higher than younger trees.
 
 ``` r
 # Implement 7.
@@ -873,8 +850,6 @@ early years. Therefore, the height of the tree was roughly positively
 correlated with its age.
 
 4.  Which genus of trees are more likely to be thicker?
-
-<!-- end list -->
 
 ``` r
 # Implement 1.
@@ -933,12 +908,12 @@ research questions are yielding interesting results?
 
 I can basically answer my research questions based on my operations.
 
-1.  From the number of observations of each genus in genus\_name and the
+1.  From the number of observations of each genus in genus_name and the
     bar plot, the KALOPANAX, HALESIA and ALBIZIA are planted the least
     and ACER is the most popular.
 
-2.  Based on the height\_years\_trees dataset that I created from
-    vancouver\_trees, I can count the number of trees in each decade.
+2.  Based on the height_years_trees dataset that I created from
+    vancouver_trees, I can count the number of trees in each decade.
     From the count and the histogram, we can find they planted the most
     number of trees in 2000\~2010.
 
@@ -955,7 +930,7 @@ I can basically answer my research questions based on my operations.
 
 Aspects of research questions remain unclear:
 
-Since there are a lot NA values in the vancouver\_tree dataset, the
+Since there are a lot NA values in the vancouver_tree dataset, the
 answer I got based on the dataset could be wrong.
 
 Improvement:
