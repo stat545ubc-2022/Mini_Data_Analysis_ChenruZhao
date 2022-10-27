@@ -6,7 +6,7 @@
 ## This README file contains description of this project, how to run my files and what files are included in this repo
 
 ### Description
-This Mini Data Anaylysis is a mini data analysis on vancouver_trees dataset.
+This project is a mini data analysis on vancouver_trees dataset that contains some research questions and interesting result.
 
 ### How to compile and run my files?
 1. Please open the mini-project-1.Rmd/mini-project-2.Rmd file in RStudio.
